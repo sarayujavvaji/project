@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FoodBridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🍽️ FoodBridge</a></div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Dashboard</h2>
+                <p id="welcomeMsg"></p>
+            </div>
+
+            <div id="donorDashboard" class="dashboard-content" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h3 id="totalDonations">0</h3>
+                            <p>Total Donations</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h3 id="activeDonations">0</h3>
+                            <p>Active Donations</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎉</div>
+                        <div class="stat-info">
+                            <h3 id="completedDonations">0</h3>
+                            <p>Completed Donations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Donation Progress</h3>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Active</span>
+                            <span id="activePercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="activeProgress"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Completed</span>
+                            <span id="completedPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="completedProgress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-donations">
+                    <h3>Your Recent Donations</h3>
+                    <div id="donorDonationsList"></div>
+                </div>
+            </div>
+
+            <div id="ngoDashboard" class="dashboard-content" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <div class="stat-info">
+                            <h3 id="requestedFood">0</h3>
+                            <p>Requested Food</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✔️</div>
+                        <div class="stat-info">
+                            <h3 id="acceptedFood">0</h3>
+                            <p>Accepted Food</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🍽️</div>
+                        <div class="stat-info">
+                            <h3 id="totalServings">0</h3>
+                            <p>Total Servings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Request Status</h3>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Pending</span>
+                            <span id="pendingPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="pendingProgress"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Accepted</span>
+                            <span id="acceptedPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="acceptedProgress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-donations">
+                    <h3>Your Requests</h3>
+                    <div id="ngoRequestsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

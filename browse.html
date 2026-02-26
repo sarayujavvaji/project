@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Donations - FoodBridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🍽️ FoodBridge</a></div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="browse-section">
+        <div class="container">
+            <h2>Available Donations</h2>
+            
+            <div class="filters">
+                <input type="text" id="searchBar" placeholder="Search food..." class="search-bar">
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="veg">🥗 Vegetarian</button>
+                    <button class="filter-btn" data-filter="non-veg">🍗 Non-Veg</button>
+                </div>
+            </div>
+
+            <div id="donationsGrid" class="donations-grid">
+                <!-- Food cards will be dynamically inserted here -->
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No donations found</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="browse.js"></script>
+</body>
+</html>

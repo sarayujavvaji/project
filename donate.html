@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Food - FoodBridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🍽️ FoodBridge</a></div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="donate-section">
+        <div class="container">
+            <h2>Donate Food</h2>
+            <form id="donateForm" class="donate-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="foodName">Food Name *</label>
+                        <input type="text" id="foodName" name="foodName" required>
+                        <span class="error-msg" id="foodNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foodType">Type *</label>
+                        <select id="foodType" name="foodType" required>
+                            <option value="">Select Type</option>
+                            <option value="veg">Vegetarian</option>
+                            <option value="non-veg">Non-Vegetarian</option>
+                        </select>
+                        <span class="error-msg" id="foodTypeError"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity">Quantity (servings) *</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+                        <span class="error-msg" id="quantityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date & Time *</label>
+                        <input type="datetime-local" id="expiryDate" name="expiryDate" required>
+                        <span class="error-msg" id="expiryError"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickupAddress">Pickup Address *</label>
+                    <textarea id="pickupAddress" name="pickupAddress" rows="3" required></textarea>
+                    <span class="error-msg" id="addressError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="foodImage">Upload Image *</label>
+                    <input type="file" id="foodImage" name="foodImage" accept="image/*" required>
+                    <span class="error-msg" id="imageError"></span>
+                </div>
+
+                <div id="imagePreview" class="image-preview"></div>
+
+                <button type="submit" class="btn btn-primary">Submit Donation</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="donate.js"></script>
+</body>
+</html>
