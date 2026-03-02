@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribute Food - FoodBridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🍽️ FoodBridge</a></div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="request.html">Request</a></li>
+                <li><a href="distribute.html">Distribute</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="browse-section">
+        <div class="container">
+            <h2>Distribute Food</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto 2rem; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">🚚 Manage Food Distribution</h3>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 1rem;">Track and manage your requested food items. Coordinate pickup logistics and distribute to those in need.</p>
+                <p style="color: #27ae60; font-weight: 600;">💡 View your accepted requests and distribution status</p>
+            </div>
+
+            <!-- Distribution Stats -->
+            <div class="stats-grid" style="margin-bottom: 2rem;">
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <h3 id="pendingPickups">12</h3>
+                        <p>Pending Pickups</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3 id="completedToday">8</h3>
+                        <p>Completed Today</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3 id="peopleServed">450</h3>
+                        <p>People Served</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Distributions -->
+            <div class="recent-donations" style="margin-bottom: 2rem;">
+                <h3>🚚 Active Distributions</h3>
+                <div id="activeDistributions"></div>
+            </div>
+
+            <!-- Completed Distributions -->
+            <div class="recent-donations">
+                <h3>✅ Completed Distributions (Last 7 Days)</h3>
+                <div id="completedDistributions"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="distribute.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
     const role = document.getElementById('role').value;
+    const organization = document.getElementById('organization').value.trim();
     
     let isValid = true;
     
@@ -54,11 +55,21 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
         }
         
         // Save user
-        const user = { fullName, email, password, role };
+        const user = { fullName, email, password, role, organization: organization || null };
         users.push(user);
         localStorage.setItem('users', JSON.stringify(users));
         
         alert('Registration successful! Please login.');
         window.location.href = 'login.html';
+    }
+});
+
+// Show/hide organization field based on role
+document.getElementById('role').addEventListener('change', (e) => {
+    const orgField = document.getElementById('organizationField');
+    if (e.target.value === 'recipient' || e.target.value === 'donor') {
+        orgField.style.display = 'block';
+    } else {
+        orgField.style.display = 'none';
     }
 });

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - FoodBridge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html">🍽️ FoodBridge</a></div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="request.html">Request</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>📊 Data & Analytics</h2>
+                <p>Track food waste trends and platform performance</p>
+            </div>
+
+            <div style="max-width: 1000px; margin: 0 auto 2rem; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">📈 Platform Insights</h3>
+                <p style="color: #555; line-height: 1.8;">Comprehensive analytics on food donations, waste reduction, and distribution patterns. Data updated in real-time.</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-info">
+                        <h3 id="totalDonations">156</h3>
+                        <p>Total Donations</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🍽️</div>
+                    <div class="stat-info">
+                        <h3 id="totalServings">4,850</h3>
+                        <p>Total Servings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">♻️</div>
+                    <div class="stat-info">
+                        <h3 id="wasteReduced">2,425 kg</h3>
+                        <p>Waste Reduced</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3 id="completionRate">78%</h3>
+                        <p>Completion Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food Type Distribution -->
+            <div class="recent-donations" style="margin-bottom: 2rem;">
+                <h3>🥗 Food Type Distribution</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="background: #d4edda; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: #155724;">92</div>
+                        <div style="color: #155724;">Vegetarian</div>
+                        <div style="font-size: 0.9rem; color: #155724; margin-top: 0.5rem;">59%</div>
+                    </div>
+                    <div style="background: #f8d7da; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold; color: #721c24;">64</div>
+                        <div style="color: #721c24;">Non-Vegetarian</div>
+                        <div style="font-size: 0.9rem; color: #721c24; margin-top: 0.5rem;">41%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Trends -->
+            <div class="recent-donations" style="margin-bottom: 2rem;">
+                <h3>📈 Monthly Donation Trends</h3>
+                <div id="monthlyTrends"></div>
+            </div>
+
+            <!-- Top Donors -->
+            <div class="recent-donations" style="margin-bottom: 2rem;">
+                <h3>🏆 Top Donors</h3>
+                <div id="topDonors"></div>
+            </div>
+
+            <!-- Location Analysis -->
+            <div class="recent-donations">
+                <h3>📍 Donations by Location</h3>
+                <div id="locationAnalysis"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="analytics.js"></script>
+</body>
+</html>

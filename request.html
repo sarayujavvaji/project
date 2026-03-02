@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Donations - FoodBridge</title>
+    <title>Request Food - FoodBridge</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,29 +13,25 @@
             <ul class="nav-links">
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="browse.html">Browse</a></li>
+                <li><a href="request.html">Request</a></li>
                 <li><a href="donate.html">Donate</a></li>
-                <li><a href="#" id="logoutBtn">Logout</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="browse-section">
         <div class="container">
-            <h2>Request & Distribute Food</h2>
+            <h2>Request Food</h2>
             
             <div style="max-width: 900px; margin: 0 auto 2rem; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                <h3 style="color: #2c3e50; margin-bottom: 1rem;">🔍 Browse & Request Food</h3>
-                <ul style="color: #555; line-height: 1.8;">
-                    <li>✓ Browse available food donations from donors</li>
-                    <li>✓ Filter by food type (Vegetarian/Non-Veg)</li>
-                    <li>✓ Search by food name or location</li>
-                    <li>✓ Request food for your organization</li>
-                    <li>✓ Coordinate pickup and distribute to those in need</li>
-                </ul>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">🔍 Search & Request Food</h3>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 1rem;">Browse available food donations and request items for your organization. Search by food name, location, or filter by type.</p>
+                <p style="color: #27ae60; font-weight: 600;">💡 Try searching: "Rice", "Vegetables", "Biryani", "New York", "Vegetarian"</p>
             </div>
 
             <div class="filters">
-                <input type="text" id="searchBar" placeholder="Search food..." class="search-bar">
+                <input type="text" id="searchBar" placeholder="Search by food name or location..." class="search-bar">
                 
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All</button>
@@ -45,7 +41,7 @@
             </div>
 
             <div id="donationsGrid" class="donations-grid">
-                <!-- Food cards will be dynamically inserted here -->
+                <!-- Sample food items -->
             </div>
 
             <div id="noResults" class="no-results" style="display: none;">
@@ -54,6 +50,6 @@
         </div>
     </section>
 
-    <script src="browse.js"></script>
+    <script src="request.js"></script>
 </body>
 </html>

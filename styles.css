@@ -715,3 +715,20 @@ body {
         width: 100%;
     }
 }
+
+/* Admin & Analyst Dashboard */
+.admin-item, .analyst-item {
+    padding: 1rem;
+    border-bottom: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-item:last-child, .analyst-item:last-child {
+    border-bottom: none;
+}
+
+.dashboard-content {
+    margin-bottom: 2rem;
+}

@@ -35,7 +35,7 @@ function displayDonations(donations) {
     noResults.style.display = 'none';
     grid.innerHTML = donations.map(donation => {
         const isExpired = new Date(donation.expiryDate) < new Date();
-        const canRequest = currentUser.role === 'ngo' && donation.status === 'available' && !isExpired;
+        const canRequest = currentUser.role === 'recipient' && donation.status === 'available' && !isExpired;
         
         return `
             <div class="food-card">

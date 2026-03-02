@@ -43,10 +43,17 @@
                     <label for="role">Register As *</label>
                     <select id="role" name="role" required>
                         <option value="">Select Role</option>
-                        <option value="donor">Donor (Restaurant/Individual)</option>
-                        <option value="ngo">NGO</option>
+                        <option value="admin">Admin</option>
+                        <option value="donor">Food Donor</option>
+                        <option value="recipient">Recipient Organization</option>
+                        <option value="analyst">Data Analyst</option>
                     </select>
                     <span class="error-msg" id="roleError"></span>
+                </div>
+
+                <div class="form-group" id="organizationField" style="display: none;">
+                    <label for="organization">Organization Name</label>
+                    <input type="text" id="organization" name="organization">
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-full">Register</button>

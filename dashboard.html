@@ -22,8 +22,18 @@
     <section class="dashboard-section">
         <div class="container">
             <div class="dashboard-header">
-                <h2>Dashboard</h2>
+                <h2>Track & Analyze Dashboard</h2>
                 <p id="welcomeMsg"></p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto 2rem; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">📊 Platform Analytics & Management</h3>
+                <ul style="color: #555; line-height: 1.8;">
+                    <li>✓ <strong>Admin:</strong> Manage users, monitor donations, ensure data accuracy</li>
+                    <li>✓ <strong>Food Donor:</strong> Track donation impact and completion rates</li>
+                    <li>✓ <strong>Recipient Org:</strong> View requested food and servings received</li>
+                    <li>✓ <strong>Data Analyst:</strong> Analyze trends, food distribution, and waste reduction metrics</li>
+                </ul>
             </div>
 
             <div id="donorDashboard" class="dashboard-content" style="display: none;">
@@ -129,6 +139,92 @@
                 <div class="recent-donations">
                     <h3>Your Requests</h3>
                     <div id="ngoRequestsList"></div>
+                </div>
+            </div>
+
+            <div id="adminDashboard" class="dashboard-content" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3 id="totalUsers">0</h3>
+                            <p>Total Users</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎁</div>
+                        <div class="stat-info">
+                            <h3 id="totalDonors">0</h3>
+                            <p>Food Donors</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-info">
+                            <h3 id="totalRecipients">0</h3>
+                            <p>Recipient Orgs</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <h3 id="totalDonationsAdmin">0</h3>
+                            <p>Total Donations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-donations">
+                    <h3>All Users</h3>
+                    <div id="usersList"></div>
+                </div>
+
+                <div class="recent-donations">
+                    <h3>Recent Donations</h3>
+                    <div id="allDonationsList"></div>
+                </div>
+            </div>
+
+            <div id="analystDashboard" class="dashboard-content" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <h3 id="totalDonationsAnalyst">0</h3>
+                            <p>Total Donations</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🍽️</div>
+                        <div class="stat-info">
+                            <h3 id="totalServingsAnalyst">0</h3>
+                            <p>Total Servings</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-info">
+                            <h3 id="avgServings">0</h3>
+                            <p>Avg Servings/Donation</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">♻️</div>
+                        <div class="stat-info">
+                            <h3 id="wasteReduced">0</h3>
+                            <p>Waste Reduced</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-donations">
+                    <h3>Food Type Distribution</h3>
+                    <div id="foodTypesList"></div>
+                </div>
+
+                <div class="recent-donations">
+                    <h3>Trends & Insights</h3>
+                    <div id="trendsList"></div>
                 </div>
             </div>
         </div>
